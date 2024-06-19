@@ -40,58 +40,58 @@ private extension OCKStore {
                                interval: DateComponents(day: 1))
         ])
 
-        var doxylamine = OCKTask(id: "doxylamine", title: "Take Medicine",
+        var doxylamine = OCKTask(id: "doxylamine", title: "약 복용",
                              carePlanID: nil, schedule: schedule)
-        doxylamine.instructions = "Take a medicine when you experience panic attack."
+        doxylamine.instructions = "공황 발작을 겪을 때 약을 복용하세요"
 
         let nauseaSchedule = OCKSchedule(composing: [
             OCKScheduleElement(start: beforeBreakfast, end: nil, interval: DateComponents(day: 1),
-                               text: "Anytime throughout the day", targetValues: [], duration: .allDay)
+                               text: "하루 중 언제든지", targetValues: [], duration: .allDay)
             ])
 
-        var nausea = OCKTask(id: "nausea", title: "Track your panic attack",
+        var nausea = OCKTask(id: "nausea", title: "공황 발작 추적",
                              carePlanID: nil, schedule: nauseaSchedule)
         nausea.impactsAdherence = false
-        nausea.instructions = "Tap the button below anytime you experience panic attack."
+        nausea.instructions = "공황 발작을 겪을 때마다 아래 버튼을 누르세요"
 
         let kegelSchedule = OCKSchedule(composing: [OCKScheduleElement(start: beforeBreakfast, end: nil, interval: DateComponents(day: 1))])
-        var kegels = OCKTask(id: "kegels", title: "Meditation", carePlanID: nil, schedule: kegelSchedule)
+        var kegels = OCKTask(id: "kegels", title: "호흡 명상", carePlanID: nil, schedule: kegelSchedule)
         kegels.impactsAdherence = true
-        kegels.instructions = "Perform Meditation"
+        kegels.instructions = "호흡 명상을 수행하세요"
 
         addTasks([nausea, doxylamine, kegels], callbackQueue: .main, completion: nil)
 
-        var contact1 = OCKContact(id: "jane", givenName: "Jane",
-                                  familyName: "Daniels", carePlanID: nil)
-        contact1.asset = "JaneDaniels"
-        contact1.title = "Family Practice Doctor"
-        contact1.role = "Dr. Daniels is a family practice doctor with 8 years of experience."
-        contact1.emailAddresses = [OCKLabeledValue(label: CNLabelEmailiCloud, value: "janedaniels@icloud.com")]
-        contact1.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(324) 555-7415")]
-        contact1.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(324) 555-7415")]
+        var contact1 = OCKContact(id: "jane", givenName: "혁진",
+                                  familyName: "윤", carePlanID: nil)
+        contact1.asset = "윤혁진"
+        contact1.title = "정신과"
+        contact1.role = "정신과 의사로 8년간 근무"
+        contact1.emailAddresses = [OCKLabeledValue(label: CNLabelEmailiCloud, value: "yoon@icloud.com")]
+        contact1.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(010) 555-5555")]
+        contact1.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(010) 555-7415")]
 
         contact1.address = {
             let address = OCKPostalAddress()
-            address.street = "2598 Reposa Way"
-            address.city = "San Francisco"
-            address.state = "CA"
-            address.postalCode = "94127"
+            address.street = "강남대로 428"
+            address.city = "서울"
+            address.state = "한국"
+            address.postalCode = "0000"
             return address
         }()
 
-        var contact2 = OCKContact(id: "matthew", givenName: "Matthew",
-                                  familyName: "Reiff", carePlanID: nil)
-        contact2.asset = "MatthewReiff"
-        contact2.title = "Psychiatrist"
-        contact2.role = "Dr. Reiff is an Psychiatrist with 13 years of experience."
-        contact2.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(324) 555-7415")]
-        contact2.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(324) 555-7415")]
+        var contact2 = OCKContact(id: "matthew", givenName: "동인",
+                                  familyName: "강", carePlanID: nil)
+        contact2.asset = "강동인"
+        contact2.title = "정신과"
+        contact2.role = "정신과 의사로 13년간 근무"
+        contact2.phoneNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(010) 333-3333")]
+        contact2.messagingNumbers = [OCKLabeledValue(label: CNLabelWork, value: "(010) 333-3333")]
         contact2.address = {
             let address = OCKPostalAddress()
-            address.street = "396 El Verano Way"
-            address.city = "San Francisco"
-            address.state = "CA"
-            address.postalCode = "94127"
+            address.street = "강남대로 357"
+            address.city = "서울"
+            address.state = "한국"
+            address.postalCode = "0000"
             return address
         }()
 

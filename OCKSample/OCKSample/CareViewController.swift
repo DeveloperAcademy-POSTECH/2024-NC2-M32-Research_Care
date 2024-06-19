@@ -16,7 +16,7 @@ class CareViewController: OCKDailyPageViewController {
         viewController.title = "Care Team"
         viewController.isModalInPresentation = true
         viewController.navigationItem.rightBarButtonItem =
-            UIBarButtonItem(title: "Done", style: .plain, target: self,
+            UIBarButtonItem(title: "완료", style: .plain, target: self,
                             action: #selector(dismissContactsListViewController))
 
         let navigationController = UINavigationController(rootViewController: viewController)
@@ -74,7 +74,7 @@ class CareViewController: OCKDailyPageViewController {
                     // Create a plot comparing nausea to medication adherence.
                     let nauseaDataSeries = OCKDataSeriesConfiguration(
                         taskID: "nausea",
-                        legendTitle: "Panic Attack",
+                        legendTitle: "공항발작",
                         gradientStartColor: nauseaGradientStart,
                         gradientEndColor: nauseaGradientEnd,
                         markerSize: 10,
@@ -82,7 +82,7 @@ class CareViewController: OCKDailyPageViewController {
 
                     let doxylamineDataSeries = OCKDataSeriesConfiguration(
                         taskID: "doxylamine",
-                        legendTitle: "Medicine",
+                        legendTitle: "약",
                         gradientStartColor: .systemGray2,
                         gradientEndColor: .systemGray,
                         markerSize: 10,
@@ -91,9 +91,9 @@ class CareViewController: OCKDailyPageViewController {
                     let insightsCard = OCKCartesianChartViewController(plotType: .bar, selectedDate: date,
                                                                        configurations: [nauseaDataSeries, doxylamineDataSeries],
                                                                        storeManager: self.storeManager)
-                    insightsCard.chartView.headerView.titleLabel.text = "Panic Attack & Medicine Intake"
-                    insightsCard.chartView.headerView.detailLabel.text = "This Week"
-                    insightsCard.chartView.headerView.accessibilityLabel = "Panic Attack & Medicine Intake, This Week"
+                    insightsCard.chartView.headerView.titleLabel.text = "공항 발작 & 약 복용"
+                    insightsCard.chartView.headerView.detailLabel.text = "이번주"
+                    insightsCard.chartView.headerView.accessibilityLabel = "이번주 공항 발작 & 약 복용"
                     listViewController.appendViewController(insightsCard, animated: false)
 
                     // Also create a card that displays a single event.
