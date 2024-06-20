@@ -34,7 +34,7 @@ struct ContentView: View {
                     Image(systemName: "stethoscope")
                     Text("Care")
                 }
-            Text("Home Screen")
+            ResearchView()
                 .tabItem {
                     Image(systemName: "doc.text.magnifyingglass")
                     Text("Research")

@@ -24,15 +24,17 @@ struct SurveyView3: View {
         "자제력을 잃을 것 같거나 미칠 것 같은 두려움이 있다."
     ]
     
+    @available(iOS 16.0, *)
     var body: some View {
         VStack {
             HStack{
                 Spacer(minLength: 10)
-                Text("마음 알아보기")
-                    .font(.largeTitle)
-                    .padding()
-                    .bold()
-                    .frame(maxWidth:.infinity, alignment: .leading)
+                    Text("마음 알아보기")
+                        .font(.largeTitle)
+                        .padding()
+                        .bold()
+                        .frame(maxWidth:.infinity, alignment: .leading)
+
             }
             
             HStack{

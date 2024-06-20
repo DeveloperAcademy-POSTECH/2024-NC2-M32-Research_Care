@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct ResearchView: View {
     @State private var showModal = false
