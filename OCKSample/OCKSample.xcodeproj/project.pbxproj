@@ -18,6 +18,17 @@
 		03FEBEC7237A0D6100ACB35E /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 03FEBEC5237A0D6100ACB35E /* Localizable.stringsdict */; };
 		208BE38A2C23AE8200A0CFAD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208BE3892C23AE8200A0CFAD /* ContentView.swift */; };
 		208BE38E2C23B3CC00A0CFAD /* CareViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208BE38D2C23B3CC00A0CFAD /* CareViewControllerRepresentable.swift */; };
+		20C4694A2C23D1A300541C34 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C469492C23D1A300541C34 /* GraphView.swift */; };
+		20C4694C2C23D1AE00541C34 /* ResearchKit_Tut2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4694B2C23D1AE00541C34 /* ResearchKit_Tut2App.swift */; };
+		20C4694E2C23D1B600541C34 /* ResearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4694D2C23D1B600541C34 /* ResearchView.swift */; };
+		20C469502C23D1BF00541C34 /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C4694F2C23D1BF00541C34 /* SurveyView.swift */; };
+		20C469522C23D1C600541C34 /* SurveyView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C469512C23D1C600541C34 /* SurveyView2.swift */; };
+		20C469542C23D1CE00541C34 /* SurveyView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C469532C23D1CE00541C34 /* SurveyView3.swift */; };
+		20C469562C23D1DF00541C34 /* leo_ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C469552C23D1DF00541C34 /* leo_ContentView.swift */; };
+		20C469602C23D26700541C34 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C469422C23D17000541C34 /* ResearchKit.framework */; };
+		20C469612C23D26700541C34 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 20C469422C23D17000541C34 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		20C469622C23D26C00541C34 /* ResearchKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C469462C23D17000541C34 /* ResearchKitUI.framework */; };
+		20C469632C23D26C00541C34 /* ResearchKitUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 20C469462C23D17000541C34 /* ResearchKitUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E72B2C0A226939E3009A9438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72B2C09226939E3009A9438 /* AppDelegate.swift */; };
 		E72B2C14226939E4009A9438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E72B2C12226939E4009A9438 /* LaunchScreen.storyboard */; };
 		E7440E4F229477F7007AD30A /* CareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7440E4E229477F7007AD30A /* CareViewController.swift */; };
@@ -40,6 +51,34 @@
 			remoteGlobalIDString = 5196C7F9226F8F8F00F1C2A2;
 			remoteInfo = CareKitTests;
 		};
+		20C469412C23D17000541C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20C469382C23D17000541C34 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		20C469432C23D17000541C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20C469382C23D17000541C34 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		20C469452C23D17000541C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20C469382C23D17000541C34 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA1C7A5A288B0C68004DAB3A;
+			remoteInfo = "ResearchKitUI (iOS)";
+		};
+		20C469472C23D17000541C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20C469382C23D17000541C34 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CAD08967289DD747007B2A98;
+			remoteInfo = ResearchKitActiveTask;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,7 +89,9 @@
 			dstSubfolderSpec = 10;
 			files = (
 				03A2F78A237F51D800A13638 /* CareKitStore.framework in Embed Frameworks */,
+				20C469632C23D26C00541C34 /* ResearchKitUI.framework in Embed Frameworks */,
 				03A2F788237F51D800A13638 /* CareKit.framework in Embed Frameworks */,
+				20C469612C23D26700541C34 /* ResearchKit.framework in Embed Frameworks */,
 				03A2F78C237F51D800A13638 /* CareKitUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -67,6 +108,14 @@
 		1409475222B025AD005C1D16 /* CareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		208BE3892C23AE8200A0CFAD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		208BE38D2C23B3CC00A0CFAD /* CareViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		20C469382C23D17000541C34 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../ResearchKit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
+		20C469492C23D1A300541C34 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		20C4694B2C23D1AE00541C34 /* ResearchKit_Tut2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchKit_Tut2App.swift; sourceTree = "<group>"; };
+		20C4694D2C23D1B600541C34 /* ResearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchView.swift; sourceTree = "<group>"; };
+		20C4694F2C23D1BF00541C34 /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		20C469512C23D1C600541C34 /* SurveyView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView2.swift; sourceTree = "<group>"; };
+		20C469532C23D1CE00541C34 /* SurveyView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView3.swift; sourceTree = "<group>"; };
+		20C469552C23D1DF00541C34 /* leo_ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leo_ContentView.swift; sourceTree = "<group>"; };
 		E72B2C06226939E3009A9438 /* OCKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E72B2C09226939E3009A9438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E72B2C13226939E4009A9438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,7 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03A2F789237F51D800A13638 /* CareKitStore.framework in Frameworks */,
+				20C469622C23D26C00541C34 /* ResearchKitUI.framework in Frameworks */,
 				03A2F787237F51D800A13638 /* CareKit.framework in Frameworks */,
+				20C469602C23D26700541C34 /* ResearchKit.framework in Frameworks */,
 				03A2F78B237F51D800A13638 /* CareKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +148,17 @@
 			children = (
 				03A2F768237F51B400A13638 /* CareKit.framework */,
 				03A2F76A237F51B400A13638 /* CareKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20C469392C23D17000541C34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20C469422C23D17000541C34 /* ResearchKit.framework */,
+				20C469442C23D17000541C34 /* ResearchKitTests.xctest */,
+				20C469462C23D17000541C34 /* ResearchKitUI.framework */,
+				20C469482C23D17000541C34 /* ResearchKitActiveTask.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +178,7 @@
 		E72B2BFD226939E3009A9438 = {
 			isa = PBXGroup;
 			children = (
+				20C469382C23D17000541C34 /* ResearchKit.xcodeproj */,
 				03A2F762237F51B400A13638 /* CareKit.xcodeproj */,
 				E72B2C08226939E3009A9438 /* OCKSample */,
 				E72B2C07226939E3009A9438 /* Products */,
@@ -134,6 +197,13 @@
 		E72B2C08226939E3009A9438 /* OCKSample */ = {
 			isa = PBXGroup;
 			children = (
+				20C469552C23D1DF00541C34 /* leo_ContentView.swift */,
+				20C4694B2C23D1AE00541C34 /* ResearchKit_Tut2App.swift */,
+				20C4694D2C23D1B600541C34 /* ResearchView.swift */,
+				20C4694F2C23D1BF00541C34 /* SurveyView.swift */,
+				20C469512C23D1C600541C34 /* SurveyView2.swift */,
+				20C469532C23D1CE00541C34 /* SurveyView3.swift */,
+				20C469492C23D1A300541C34 /* GraphView.swift */,
 				E72B2C09226939E3009A9438 /* AppDelegate.swift */,
 				208BE3892C23AE8200A0CFAD /* ContentView.swift */,
 				03F060092331946600CCE09B /* SceneDelegate.swift */,
@@ -211,6 +281,10 @@
 					ProductGroup = 03A2F763237F51B400A13638 /* Products */;
 					ProjectRef = 03A2F762237F51B400A13638 /* CareKit.xcodeproj */;
 				},
+				{
+					ProductGroup = 20C469392C23D17000541C34 /* Products */;
+					ProjectRef = 20C469382C23D17000541C34 /* ResearchKit.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -232,6 +306,34 @@
 			fileType = wrapper.cfbundle;
 			path = CareKitTests.xctest;
 			remoteRef = 03A2F769237F51B400A13638 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20C469422C23D17000541C34 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = 20C469412C23D17000541C34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20C469442C23D17000541C34 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = 20C469432C23D17000541C34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20C469462C23D17000541C34 /* ResearchKitUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKitUI.framework;
+			remoteRef = 20C469452C23D17000541C34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20C469482C23D17000541C34 /* ResearchKitActiveTask.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKitActiveTask.framework;
+			remoteRef = 20C469472C23D17000541C34 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -276,12 +378,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C469542C23D1CE00541C34 /* SurveyView3.swift in Sources */,
+				20C4694C2C23D1AE00541C34 /* ResearchKit_Tut2App.swift in Sources */,
 				E7440E4F229477F7007AD30A /* CareViewController.swift in Sources */,
 				208BE38A2C23AE8200A0CFAD /* ContentView.swift in Sources */,
+				20C469562C23D1DF00541C34 /* leo_ContentView.swift in Sources */,
+				20C4694A2C23D1A300541C34 /* GraphView.swift in Sources */,
 				208BE38E2C23B3CC00A0CFAD /* CareViewControllerRepresentable.swift in Sources */,
 				E72B2C0A226939E3009A9438 /* AppDelegate.swift in Sources */,
 				E7C37849228F887800E982D8 /* TipView.swift in Sources */,
 				03F0600A2331946600CCE09B /* SceneDelegate.swift in Sources */,
+				20C469502C23D1BF00541C34 /* SurveyView.swift in Sources */,
+				20C4694E2C23D1B600541C34 /* ResearchView.swift in Sources */,
+				20C469522C23D1C600541C34 /* SurveyView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
