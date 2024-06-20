@@ -9,40 +9,15 @@ import ResearchKit
 import Charts
 
 struct GraphView: View {
-    //    @Binding var chartData: [Bool: Int]     // 차트 띄우기 변수(1일)
     @Binding var showModal: Bool            // 모달띄우기 변수
     @Binding var weeklyData: [DailyResponse]// 차트 띄우기 변수(1주일)
     @Binding var showYesData: Bool          // Yes/No 토글상태
-    
-    // 1일용
-    //    var body: some View{
-    //        Chart {
-    //            BarMark(
-    //                x: .value("Answer", "Yes"),
-    //                y: .value("Count", chartData[true] ?? 0)
-    //            )
-    //            .foregroundStyle(Color.green)
-    //
-    //            BarMark(
-    //                x: .value("Answer", "No"),
-    //                y: .value("Count", chartData[false] ?? 0)
-    //            )
-    //            .foregroundStyle(Color.red)
-    //        }
-    //        .chartYScale(domain: 0...15)
-    //        .frame(height: 300)
-    //        .padding()
-    //    }
+//    let color_main = Color(red: 235/255, green: 106/255, blue: 100/255)
+    let color_main = Color(red: 52/255, green: 120/255, blue: 246/255)
+
     
     var body: some View {
         VStack {
-            HStack {
-                Text("건강지수 보기 On")
-                Toggle("", isOn: $showYesData)
-                    .labelsHidden()
-            }
-            .frame(maxWidth:.infinity, alignment: .trailing)
-            .padding(.trailing, 70)
             
             ZStack{
                 Chart {
@@ -52,7 +27,8 @@ struct GraphView: View {
                                 x: .value("Date", data.date, unit: .day),
                                 y: .value("Count", data.yesCount)
                             )
-                            .foregroundStyle(Color.gray)
+//                            .foregroundStyle(Color.gray)
+                            .foregroundStyle(Color(UIColor.systemGray5))
                             .annotation(position: .top) {
                                 Text("\(data.yesCount)")
                                     .font(.caption)
@@ -63,12 +39,11 @@ struct GraphView: View {
                                 x: .value("Date", data.date, unit: .day),
                                 y: .value("Count", data.noCount)
                             )
-                            .foregroundStyle(Color.green)
+                            .foregroundStyle(color_main)
                             .annotation(position: .top) {
                                 Text("\(data.noCount)")
                                     .font(.caption)
-                                    .foregroundColor(.green)
-                            }
+                                    .foregroundColor(color_main)                            }
                         }
                     }
                 }
@@ -91,7 +66,7 @@ struct GraphView: View {
                 }
                 .chartXAxisLabel("Date", alignment: .trailing)
                 .chartYAxisLabel(" ")
-                // chartYAxisLabel은 위에 직접 그렸습니다.
+                // chartYAxisLabel은 ZStack+Text 조합으로 그렸습니다.
                 .background(Color(UIColor.white).edgesIgnoringSafeArea(.all)) // 기본컬러로 메우기
                 .frame(width: 350, height: 330)
                 .cornerRadius(8)
@@ -105,6 +80,23 @@ struct GraphView: View {
                         .frame(maxWidth:.infinity, alignment: .leading)
                     Spacer()
                 }.frame(width: 350, height: 310)
+                
+                VStack{
+                    HStack {
+                        Text("건강지수 확인하기")
+                        Toggle("", isOn: $showYesData)
+                            .labelsHidden()
+                            .toggleStyle(SwitchToggleStyle(tint: color_main))
+                    }
+                    .frame(maxWidth:.infinity, alignment: .trailing)
+                    
+                    Text("(버튼을 Off하면, 상담모드가 됩니다)")
+                        .font(.caption)
+                        .foregroundStyle(Color(.gray))
+                        .frame(maxWidth:.infinity, alignment: .trailing)
+                    Spacer()
+                }.frame(width: 350, height: 450)
+                    .padding(.trailing, 30)
             } // ZStack
         }
         

@@ -4,7 +4,6 @@ import ResearchKit
 
 struct SurveyView3: View {
     @State private var responses: [Bool?] = Array(repeating: nil, count: 13)    // Survey띄우기 변수
-//    @Binding var chartData: [Bool: Int]     // 차트 띄우기 변수(1일)
     @Binding var showModal: Bool            // 모달띄우기 변수
     @Binding var weeklyData: [DailyResponse]// 차트 띄우기 변수(1주일)
 
@@ -30,7 +29,7 @@ struct SurveyView3: View {
             HStack{
                 Spacer(minLength: 10)
                     Text("마음 알아보기")
-                        .font(.largeTitle)
+                        .font(.title2)
                         .padding()
                         .bold()
                         .frame(maxWidth:.infinity, alignment: .leading)
@@ -40,7 +39,7 @@ struct SurveyView3: View {
             HStack{
                 Spacer(minLength: 30)
                 Text("오늘 당신의 마음을 알아보세요\n아래 설문에서 Yes/No를 세어봅시다.")
-                    .font(.callout)
+                    .font(.subheadline)
                     .frame(maxWidth:.infinity, alignment: .leading)
             }
             
@@ -59,12 +58,16 @@ struct SurveyView3: View {
             
             Button(action: submitResponses) { //다른 뷰와 통합해서 없애기...
                 Text("Submit")
-                    .font(.title)
-                    .padding()
+                    .font(.title3)
+                    .frame(maxWidth:.infinity)
+                    .padding(16)
                     .background(Color.blue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
+            .padding(.bottom, 10)
+            .padding(.leading, 20)
+            .padding(.trailing, 20)
         }
         .background(Color(UIColor.systemGray6).edgesIgnoringSafeArea(.all)) // 기본컬러로 메우기
     }
@@ -96,10 +99,6 @@ struct SurveyView3: View {
         let taskResult = ORKTaskResult(taskIdentifier: "SurveyTask", taskRun: UUID(), outputDirectory: nil)
         taskResult.results = stepResults
         
-        // Yes/No Count 데이터 전송용(1일용)
-//        chartData[true] = yesCount
-//        chartData[false] = noCount
-        
         // Yes/No Count 데이터 전송용(1주일용)
         let todayResponse = DailyResponse(date: Date(), yesCount: yesCount, noCount: noCount)
         if weeklyData.count >= 7 {
@@ -119,11 +118,6 @@ struct DailyResponse: Identifiable {
     let yesCount: Int
     let noCount: Int
 }
-
-
-//#Preview {
-//    SurveyView3(chartData: .constant([true: 8, false: 5]), showModal: .constant(true))
-//}
 
 struct SurveyView3_Previews: PreviewProvider {
     static var previews: some View {

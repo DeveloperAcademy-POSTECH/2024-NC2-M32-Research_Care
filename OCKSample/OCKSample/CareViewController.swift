@@ -65,10 +65,10 @@ class CareViewController: OCKDailyPageViewController {
 
                     // dynamic gradient colors
                     let nauseaGradientStart = UIColor { traitCollection -> UIColor in
-                        return traitCollection.userInterfaceStyle == .light ? #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1) : #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+                        return traitCollection.userInterfaceStyle == .light ? #colorLiteral(red: 0.2039215686, green: 0.4705882353, blue: 0.9647058824, alpha: 1) : #colorLiteral(red: 0.2039215686, green: 0.4705882353, blue: 0.9647058824, alpha: 1)
                     }
                     let nauseaGradientEnd = UIColor { traitCollection -> UIColor in
-                        return traitCollection.userInterfaceStyle == .light ? #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1) : #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+                        return traitCollection.userInterfaceStyle == .light ? #colorLiteral(red: 0.2039215686, green: 0.4705882353, blue: 0.9647058824, alpha: 1) : #colorLiteral(red: 0.2039215686, green: 0.4705882353, blue: 0.9647058824, alpha: 1)
                     }
 
                     // Create a plot comparing nausea to medication adherence.
