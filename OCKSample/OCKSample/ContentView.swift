@@ -5,7 +5,7 @@ struct ContentView: View {
         let appearance = UITabBarAppearance()
         
         // 사용자 정의 색상 설정
-        let customColor = UIColor(red: 0.92, green: 0.42, blue: 0.39, alpha: 1.0) // #EB6A64 색상
+        let customColor = UIColor(red: 52/255, green: 120/255, blue: 246/255, alpha: 1.0)// #EB6A64 색상
         let backgroundColor = UIColor.white // 원하는 배경색으로 변경
         
         // 선택된 아이템 색상 설정
